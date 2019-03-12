@@ -6,7 +6,7 @@
 // TODO: 4.Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated
 // TODO: 5. Display the values of each array as unordered lists in the browser
 // 6.
-
+var hours_in_a_week = 14;
 //step one, lable everything//
 var pike = {
   loction: '1st and Pike',
@@ -91,13 +91,6 @@ pike.cookies_sold_per_hr = function(){
     console.log('test');
   }
 };
-
-
-// get on the page
-pike.cookies_sold_per_hr();  
-pike.render_cookies_to_page();
-
-
 //Last step// 
 
 // Add things to the DOM
@@ -105,15 +98,34 @@ pike.render_cookies_to_page();
 // Find a parent container
 // create an element
 // give that element content
-// append that element to the parent
+// append that element to the parent // (appendChild)
+// parent.appendChild(child)
 
-// var pike_title = document.getElementsById('pike');
-// pike_title_2.innerHTML = '1st and Pike';
-// console.log(pike_title_2.innerHTML);
 
 var title = document.getElementById('header'); 
 title.innerHTML = 'Salmon Cooky';
 console.log(title.innerHTML);
 
-var p = document.createElement("p");
-document.body.appendChild(p);
+pike.render_cookies_to_page = function(){
+  var parent = document.getElementById('pike');
+  // console.log(parent);
+  // console.log('hello');
+  var title_list_item =document.createElement('li');
+  // console.log(title_list_item);
+  title_list_item.textContent = this.storeName;
+  parent.appendChild(title_list_item);
+  var li_el = document.createElement('li');
+
+for (var i = 0; i < hours_in_a_week; i++){
+  
+var cookies_sold_per_hr = this.cookie_result[i];
+//li_el.textConent = '6am 30 cookies'//
+  li_el.textContent = `${i+6}:00 30 cookies`;
+  parent.appendChild(li_el);
+}
+
+};
+
+// get on the page
+pike.cookies_sold_per_hr();  
+pike.render_cookies_to_page();
