@@ -6,91 +6,59 @@
 // TODO: 4.Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated
 // TODO: 5. Display the values of each array as unordered lists in the browser
 // 6.
-var hours_in_a_week = 14;
-//step one, lable everything//
-var pike = {
-  loction: '1st and Pike',
-min_cus_per_hr: 23,
-max_cus_per_hr: 65,
-avg_cookie_per_hr: 6.3,
-cookie_result:[],
-};
 
-var seaTac = {
-  min_cus_per_hr: 3,
-  max_cus_per_hr: 24,
-  avg_cookie_per_hr: 1.2,
-  cookie_result: [],
-};
 
-var seaCenter = {
-min_cus_per_hr: 11,
-max_cus_per_hr: 38,
-avg_cookie_per_hr: 3.7,
- cookie_result: [],
-}
-
-var capHill = {
-min_cus_per_hr: 20,
-max_cus_per_hr: 38,
-avg_cookie_per_hr: 2.3,
-cookie_result: [],
-};
-
-var alki = {
-  min_cus_per_hr: 2,
-  max_cus_per_hr: 16,
-  avg_cookie_per_hr: 4.6,
-  cookie_result: [],
-};
-console.log('Loctions and thier key vaules');
-// step two throw all my loctions into a array //
-var loctions_result = [pike, seaTac, seaCenter, capHill, alki];
-
- 
-
-  //step three generate random number of customers per hour at the store//
-//found this of random number on the web/my teacher
-  function getRandomIntInclusive(min, max) {
+function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
-  } 
-console.log('Show pike on the page');
-
-
-
-
-pike.render_cookies_to_page = function(){
-  console.log('show cookies');
-
-  // Get the parent
-  // Make a new element
-  // Give it content
-  // append it to the page
-
-  var pike_ul = document.getElementById('pike');
-var title_li = document.createElement('li');
-title_li.textContent = 'cookies and time';
-  pike_ul.appendChild(title_li);
-  
-for (var i = 0; i < this.cookie_result.length; i++) {
-  var new_li = document.createElement('li');
-  var cookies_bought = this.cookie_result[i];
-  new_li.textContent = `am: ${i + 1} am: ${cookies_bought}`;
-  console.log('test');
-
-}
-};
-
-pike.cookies_sold_per_hr = function(){
-  for(var i = 0; i < 7; i++){
-    var random_time = getRandomIntInclusive(this.min_cus_per_hr, this.max_cus_per_hr);
-    var random_customer = random_time * this.avg_cookie_per_hr;
-    this.cookie_result.push(random_customer);
-    console.log('test');
   }
+console.log('logged in randomintinclusive');
+
+var firstAndPike = {
+    minCustPerHr: 23,
+    maxCustPerHr: 65,
+    avgCookieSale: 6.3,
+    estCookieSalesPerHrArray: [],
 };
+
+
+  firstAndPike.calculateSalesPerHour = function(){
+    for(var i = 0; i < 15; i++){
+      var randomCustomersPerHour = getRandomIntInclusive (this.minCustPerHr, this.maxCustPerHr);
+      firstAndPike.estCookieSalesPerHrArray.push(randomCustomersPerHour);
+      console.log('testing');
+    }
+  };
+firstAndPike.calculateSalesPerHour();
+
+
+
+var firstAndPike_ul = document.getElementById('firstAndPike');
+var title_li = document.createElement('li');
+
+title_li.textContent = '1st and Pike';
+firstAndPike_ul.appendChild(title_li);
+console.log('testing');
+
+
+  for (var i = 0; i < 15; i++){
+  var new_li = document.createElement('li');
+  var cookiesThisHr = firstAndPike.estCookieSalesPerHrArray[i];
+  new_li.textContent = `${i + 6}:00am - ${cookiesThisHr} cookies`;
+  firstAndPike_ul.appendChild(new_li);
+  console.log(cookiesThisHr);
+  
+  };
+  console.log(firstAndPike);
+
+//   console.log(this.estCookieSalesPerHrArray);
+//   console.log('Sales last hour: ' + randomSalesPerHour);
+// console.log('Number of Cust last hour: ' + randomCustomersPerHour);
+
+
+
+  
 //Last step// 
 
 // Add things to the DOM
@@ -101,31 +69,20 @@ pike.cookies_sold_per_hr = function(){
 // append that element to the parent // (appendChild)
 // parent.appendChild(child)
 
+firstAndPike.renderEstSalesToPage = function() {
+// put store sales on page
+console.log ('going on the page');
 
-var title = document.getElementById('header'); 
-title.innerHTML = 'Salmon Cooky';
-console.log(title.innerHTML);
 
-pike.render_cookies_to_page = function(){
-  var parent = document.getElementById('pike');
-  // console.log(parent);
-  // console.log('hello');
-  var title_list_item =document.createElement('li');
-  // console.log(title_list_item);
-  title_list_item.textContent = this.storeName;
-  parent.appendChild(title_list_item);
-  var li_el = document.createElement('li');
-
-for (var i = 0; i < hours_in_a_week; i++){
-  
-var cookies_sold_per_hr = this.cookie_result[i];
-//li_el.textConent = '6am 30 cookies'//
-  li_el.textContent = `${i+6}:00 30 cookies`;
-  parent.appendChild(li_el);
-}
-
+    for (var i = 0; i < 15; i++) {
+    var new_li = document.createElement('li');
+    var firstAndPike_salesPerHour = this.estCookieSalesPerHrArray[i];
+    new_li.textContent = `${i + 1}: ${this.estCookieSalesPerHrArray[i]}  cookies`;
+    firstAndPike_ul.appendChild(new_li);
+    }
 };
 
-// get on the page
-pike.cookies_sold_per_hr();  
-pike.render_cookies_to_page();
+// firstAndPike.calculateSalesPerHour();
+// firstAndPike.renderEstSalesToPage();
+
+
