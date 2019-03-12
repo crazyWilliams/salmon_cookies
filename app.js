@@ -1,8 +1,8 @@
 'use strict';
 
 //DONE: 1.Stores the min/max hourly customers, and the average cookies per customer, in object properties
-// TODO: I THINK ITS DONE??                                       Not step 2, its step 5 or somwthing .Store the results for each location in a separate array... perhaps as a property of the object representing that location
-// TODO: 3.Uses a method of that object to generate a random number of customers per hour. Objects/Math/random
+//  I THINK ITS DONE??                                        DONE: Not step 2, its step 5 or somwthing .Store the results for each location in a separate array... perhaps as a property of the object representing that location
+// TODO: KINDA DONE: 3.Uses a method of that object to generate a random number of customers per hour. Objects/Math/random
 // TODO: 4.Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated
 // TODO: 5. Display the values of each array as unordered lists in the browser
 // 6.
@@ -107,8 +107,13 @@ pike.render_cookies_to_page();
 // give that element content
 // append that element to the parent
 
-
+// var pike_title = document.getElementsById('pike');
+// pike_title_2.innerHTML = '1st and Pike';
+// console.log(pike_title_2.innerHTML);
 
 var title = document.getElementById('header'); 
-title.innerHTML = 'Salomon Cooky';
+title.innerHTML = 'Salmon Cooky';
 console.log(title.innerHTML);
+
+var p = document.createElement("p");
+document.body.appendChild(p);
