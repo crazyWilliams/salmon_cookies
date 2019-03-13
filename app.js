@@ -349,9 +349,7 @@ capitolHill.renderAsUl();
 
 
 
-
-
-
+// =============================================================//
 
 
 
@@ -363,9 +361,9 @@ capitolHill.renderAsUl();
 
 
 var alki = {
-  minCustPerHr: 3,
-   maxCustPerHr: 24,
-   avgCookieSale: 1.2,
+  minCustPerHr: 23,
+   maxCustPerHr: 65,
+   avgCookieSale: 6.3,
    estCookieSalesPerHrArray: [],
 };
 alki.name = 'alki';
@@ -381,12 +379,12 @@ alki.calculateSalesPerHour = function(){
  alki.calculateSalesPerHour();
 
 
-alki.renderAsUl = function(){
-var alki = document.getElementById('alki');
+ alki.renderAsUl = function(){
+var alki_ul = document.getElementById('alki');
 var title_li = document.createElement('li');
-title_li.textContent = 'alki';
+title_li.textContent = 'Alki';
 alki_ul.appendChild(title_li);
-console.log('testing');
+
 var times = [6 + ':00am ',7 + ':00am ',8 + ':00am ',9 + ':00am ',10 + ':00am ',11 + ':00am ',12 + ':00pm ',1 + ':00pm ',2 + ':00pm ',3 + ':00pm ',4 + ':00pm ',5 + ':00pm ',6 + ':00pm ',7 + ':00am ',8 + ':00pm '];
 // var am = [':00am'];
 // var pm = [':00pm'];
