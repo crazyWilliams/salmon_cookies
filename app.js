@@ -16,12 +16,13 @@ function getRandomIntInclusive(min, max) {
 console.log('logged in randomintinclusive');
 
 var firstAndPike = {
+  
     minCustPerHr: 23,
     maxCustPerHr: 65,
     avgCookieSale: 6.3,
     estCookieSalesPerHrArray: [],
 };
-
+firstAndPike.name = 'Frist and Pike';
 
   firstAndPike.calculateSalesPerHour = function(){
     for(var i = 0; i < 15; i++){
@@ -32,6 +33,9 @@ var firstAndPike = {
   };
 firstAndPike.calculateSalesPerHour();
 
+
+firstAndPike.renderAsUl = function(){
+
 var firstAndPike_ul = document.getElementById('firstAndPike');
 var title_li = document.createElement('li');
 
@@ -41,21 +45,18 @@ console.log('testing');
 var times = [6 + ':00am ',7 + ':00am ',8 + ':00am ',9 + ':00am ',10 + ':00am ',11 + ':00am ',12 + ':00pm ',1 + ':00pm ',2 + ':00pm ',3 + ':00pm ',4 + ':00pm ',5 + ':00pm ',6 + ':00pm ',7 + ':00am ',8 + ':00pm '];
 // var am = [':00am'];
 // var pm = [':00pm'];
+
   for (var i = 0; i < 15; i++){
   var new_li = document.createElement('li');
-  var cookiesThisHr = firstAndPike.estCookieSalesPerHrArray[i];
+  var cookiesThisHr = this.estCookieSalesPerHrArray[i];
   new_li.textContent = `${0 + times[i]} - ${cookiesThisHr} cookies`;
   firstAndPike_ul.appendChild(new_li);
   console.log(cookiesThisHr);
   
   };
   console.log(firstAndPike);
-
-//   console.log(this.estCookieSalesPerHrArray);
-//   console.log('Sales last hour: ' + randomSalesPerHour);
-// console.log('Number of Cust last hour: ' + randomCustomersPerHour);
-
-
+};
+firstAndPike.renderAsUl();
 
   
 //Last step// 
@@ -67,21 +68,5 @@ var times = [6 + ':00am ',7 + ':00am ',8 + ':00am ',9 + ':00am ',10 + ':00am ',1
 // give that element content
 // append that element to the parent // (appendChild)
 // parent.appendChild(child)
-
-firstAndPike.renderEstSalesToPage = function() {
-// put store sales on page
-console.log ('going on the page');
-
-
-    for (var i = 0; i < 15; i++) {
-    var new_li = document.createElement('li');
-    var firstAndPike_salesPerHour = this.estCookieSalesPerHrArray[i];
-    new_li.textContent = `${i + 1}: ${this.estCookieSalesPerHrArray[i]}  cookies`;
-    firstAndPike_ul.appendChild(new_li);
-    }
-};
-
-// firstAndPike.calculateSalesPerHour();
-// firstAndPike.renderEstSalesToPage();
 
 
