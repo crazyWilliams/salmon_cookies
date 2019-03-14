@@ -15,3 +15,47 @@ body{
 h1 {
   margin: center;
 }
+
+img {
+  display: block;
+  height: 300px;
+  width: 800px;
+  border: 2px rgb(105, 25, 17) solid;
+  box-shadow: 10px 10px 10px rgb(160, 18, 2);
+  border-radius: 15px;
+  margin: auto;
+}
+
+body{
+  background-color: salmon;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: brown;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Questrial', sans-serif;
+  font-display: auto;
+  font-size: 400%;
+  font-weight: 400px;
+  color: rgb(211, 181, 144);
+  text-align: center;
+}
+h2, h3 {
+  font-family: 'Questrial', sans-serif;
+  font-display: auto;
+  color: rgb(211, 181, 144);
+  text-align: center;
+}
+a {
+  color: rgb(211, 181, 144);
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
