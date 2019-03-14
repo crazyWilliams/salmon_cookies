@@ -62,13 +62,13 @@ firstAndPike.calculateSalesPerHour();
 // creating an element and linking it to my html id so it shows on the page//
 firstAndPike.renderAsUl = function(){
 var firstAndPike_ul = document.getElementById('firstAndPike');
-var title_li = document.createElement('td');
+var title_li = document.createElement('th');
 title_li.textContent = '1st and Pike';
 firstAndPike_ul.appendChild(title_li);
 console.log('testing');
 
 for (var i = 0; i < 15; i++){
-  var new_li = document.createElement('td');
+  var new_li = document.createElement('th');
   var cookiesThisHr = this.estCookieSalesPerHrArray[i];
   new_li.textContent = `${cookiesThisHr} `;
   firstAndPike_ul.appendChild(new_li);
@@ -102,15 +102,15 @@ seaTacAirport.calculateSalesPerHour = function(){
 
 seaTacAirport.renderAsUl = function(){
 var seaTacAirport_ul = document.getElementById('seaTacAirport');
-var title_li = document.createElement('td');
+var title_li = document.createElement('th');
 title_li.textContent = 'Sea Tac Airport';
 seaTacAirport_ul.appendChild(title_li);
 console.log('testing');
 
 for (var i = 0; i < 15; i++){
- var new_li = document.createElement('td');
+ var new_li = document.createElement('th');
  var cookiesThisHr = this.estCookieSalesPerHrArray[i];
- new_li.textContent = `${0 + times[i]} - ${cookiesThisHr} cookies`;
+ new_li.textContent = `${cookiesThisHr}`;
  seaTacAirport_ul.appendChild(new_li);
  console.log(cookiesThisHr);
  };
@@ -146,15 +146,15 @@ seattleCenter.calculateSalesPerHour = function(){
 
  seattleCenter.renderAsUl = function(){
 var seattleCenter_ul = document.getElementById('seattleCenter');
-var title_li = document.createElement('td');
+var title_li = document.createElement('th');
 title_li.textContent = 'Seattle Center';
 seattleCenter_ul.appendChild(title_li);
 console.log('testing');
 
 for (var i = 0; i < 15; i++){
- var new_li = document.createElement('td');
+ var new_li = document.createElement('th');
  var cookiesThisHr = this.estCookieSalesPerHrArray[i];
- new_li.textContent = `${0 + times[i]} - ${cookiesThisHr} cookies`;
+ new_li.textContent = `${cookiesThisHr}`;
  seattleCenter_ul.appendChild(new_li);
  console.log(cookiesThisHr);
  };
@@ -187,15 +187,15 @@ capitolHill.calculateSalesPerHour = function(){
 
  capitolHill.renderAsUl = function(){
 var capitolHill_ul = document.getElementById('capitolHill');
-var title_li = document.createElement('td');
+var title_li = document.createElement('th');
 title_li.textContent = 'Capitol Hill';
 capitolHill_ul.appendChild(title_li);
 console.log('testing');
 
 for (var i = 0; i < 15; i++){
- var new_li = document.createElement('td');
+ var new_li = document.createElement('th');
  var cookiesThisHr = this.estCookieSalesPerHrArray[i];
- new_li.textContent = `${0 + times[i]} - ${cookiesThisHr} cookies`;
+ new_li.textContent = `${cookiesThisHr}`;
  capitolHill_ul.appendChild(new_li);
  console.log(cookiesThisHr);
  };
@@ -227,17 +227,38 @@ alki.calculateSalesPerHour = function(){
 
 alki.renderAsUl = function(){
 var alki_ul = document.getElementById('alki');
-var title_li = document.createElement('li');
+var title_li = document.createElement('th');
 title_li.textContent = 'Alki';
 alki_ul.appendChild(title_li);
 
 for (var i = 0; i < 15; i++){
- var new_li = document.createElement('li');
+ var new_li = document.createElement('th');
  var cookiesThisHr = this.estCookieSalesPerHrArray[i];
- new_li.textContent = `${0 + times[i]} - ${cookiesThisHr} cookies`;
+ new_li.textContent = `${cookiesThisHr}`;
  alki_ul.appendChild(new_li);
  console.log(cookiesThisHr);
  };
  console.log(alki);
 };
 alki.renderAsUl();
+
+//=================================================//
+
+var tableEl = document.getElementById('salesTable');
+
+function buildHeader() {
+  var header_tr = document.createElement('salesTable');
+  var blankSpace = document.createElement('td');
+  // blankSpace.textContent = ''; //optional
+  header_tr.appendChild(blankSpace);
+
+  for(var i = 0; i < 15; i++){
+    var nextHeader_td = document.createElement('td');
+    nextHeader_td.textContent = hoursOfOperation[l];
+    header_tr.appendChild(nextHeader_td);
+  }
+  var total_td = document.createElement('td');
+  total_td.textContent = 'salesTable';
+  header_tr.appendChild(total_td);
+  tableEl.appendChild(header_tr);
+};

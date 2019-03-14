@@ -1,9 +1,17 @@
 table {
-  border: black solid 1px;
+  border: rgb(240, 206, 206) 30px;
   border-collapse: collapse;
   margin-bottom: 40px;
 }
 
 td, th {
   border: black solid 1px;
+  margin:  auto;
+}
+body{
+  background-color: salmon;
+
+}
+h1 {
+  margin: center;
 }
