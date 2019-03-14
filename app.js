@@ -244,21 +244,25 @@ alki.renderAsUl();
 
 //=================================================//
 
-var tableEl = document.getElementById('salesTable');
+// var tableEl = document.getElementById('salesTable');
 
-function buildHeader() {
-  var header_tr = document.createElement('salesTable');
-  var blankSpace = document.createElement('td');
-  // blankSpace.textContent = ''; //optional
-  header_tr.appendChild(blankSpace);
+// function buildHeader() {
+//   var header_tr = document.createElement('salesTable');
+//   var blankSpace = document.createElement('td');
+//   // blankSpace.textContent = ''; //optional
+//   header_tr.appendChild(blankSpace);
 
-  for(var i = 0; i < 15; i++){
-    var nextHeader_td = document.createElement('td');
-    nextHeader_td.textContent = hoursOfOperation[l];
-    header_tr.appendChild(nextHeader_td);
-  }
-  var total_td = document.createElement('td');
-  total_td.textContent = 'salesTable';
-  header_tr.appendChild(total_td);
-  tableEl.appendChild(header_tr);
-};
+//   for(var i = 0; i < 15; i++){
+//     var nextHeader_td = document.createElement('td');
+//     nextHeader_td.textContent = hoursOfOperation[l];
+//     header_tr.appendChild(nextHeader_td);
+//   }
+//   var total_td = document.createElement('td');
+//   total_td.textContent = 'salesTable';
+//   header_tr.appendChild(total_td);
+//   tableEl.appendChild(header_tr);
+// };
+
+
+
+
