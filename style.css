@@ -32,12 +32,15 @@ img {
 body{
   background-color: salmon;
   font-family: monospace;
+  
 }
+
 
 p {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: brown;
   text-align: center;
+  float: left;
 }
 
 h1 {
@@ -66,4 +69,5 @@ table {
 }
 form {
   margin: auto;
+  
 }
