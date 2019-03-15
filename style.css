@@ -5,6 +5,12 @@
   border-collapse: collapse;
   margin-bottom: 40px;
 } */
+/* cursor {
+  background:gray;
+  width:200px;
+  height:200px;
+  cursor:url("https://raw.githubusercontent.com/codefellows/seattle-201d46/master/class-06/lab/assets/salmon.png");
+} */
 
 td, th {
   border:  black solid 1px;
@@ -29,7 +35,7 @@ img {
 body{
   background-color: rgb(255, 172, 147);
   font-family: monospace;
-  
+  cursor: url("https://raw.githubusercontent.com/codefellows/seattle-201d46/master/class-06/lab/assets/salmon.png");
 }
 
 
