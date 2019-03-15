@@ -10,10 +10,7 @@ td, th {
   border:  black solid 1px;
   margin:  auto;
 }
-body{
-  background-color: salmon;
 
-}
 h1 {
   margin: center;
 }
@@ -30,7 +27,7 @@ img {
 }
 
 body{
-  background-color: salmon;
+  background-color: rgb(255, 172, 147);
   font-family: monospace;
   
 }
@@ -48,17 +45,17 @@ h1 {
   font-display: auto;
   font-size: 400%;
   font-weight: 400px;
-  color: rgb(211, 181, 144);
+  color: rgb(253, 107, 49);
   text-align: center;
 }
 h2, h3 {
   font-family: 'Questrial', sans-serif;
   font-display: auto;
-  color: rgb(211, 181, 144);
+  color: rgb(253, 107, 49);
   text-align: center;
 }
 a {
-  color: rgb(211, 181, 144);
+  color: rgb(253, 107, 49);
 }
 
 table {
