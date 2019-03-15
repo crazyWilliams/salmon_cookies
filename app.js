@@ -264,5 +264,41 @@ alki.renderAsUl();
 // };
 
 
+//=====================================================//
 
+
+    
+// 'use strict';
+
+// var testForm = document.getElementById('test-form');
+
+// var cookieStores = [];
+// var storeTable = document.getElementById('stores');
+
+
+// // testForm.addEventListener('submit', function(event){
+// //   console.log(event);
+// // });
+
+// var formSubmitHandler = function (formSubmit) {
+//   //when the form submits, it refreshes the page, lets prevent that
+//   formSubmit.preventDefault();
+
+//   // if I want the text in the username box
+//   // i look into the <event (parameter of callback function)>
+//   // into the <event>.target
+//   // into the <event>.target.<name (from html)>
+//   // into the <event>.target.<name>.value
+//   var username = formSubmit.target.username.value;
+//   var pet = formSubmit.target.pet.value;
+
+//   console.log(username);
+//   console.log(pet);
+// };
+
+// testForm.addEventListener('submit', formSubmitHandler);
+
+
+
+//=======================================================//
 
