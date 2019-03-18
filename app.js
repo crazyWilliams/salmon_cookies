@@ -2,7 +2,9 @@
 // global varabiles //
 var times = [6 + ':00am ',7 + ':00am ',8 + ':00am ',9 + ':00am ',10 + ':00am ',11 + ':00am ',12 + ':00pm ',1 + ':00pm ',2 + ':00pm ',3 + ':00pm ',4 + ':00pm ',5 + ':00pm ',6 + ':00pm ',7 + ':00am ',8 + ':00pm '];
 
-var loctions= [firstAndPike, seaTacAirport, seattleCenter, capitolHill, alki];
+
+
+// var loctions= [firstAndPike, seaTacAirport, seattleCenter, capitolHill, alki];
 
 // math method to round our number//
 function getRandomIntInclusive(min, max) {
@@ -10,6 +12,8 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+
+  
 
 // parent element
 // new element
@@ -26,19 +30,19 @@ function getRandomIntInclusive(min, max) {
 // append the tr to the table (table.appendChild(tr))
 
 
-var table_element =  document.getElementById('nums-table');
-var tr_element1 = document.createElement('tr');
+// var table_element =  document.getElementById('nums-table');
+// var tr_element1 = document.createElement('tr');
 
 
 console.log('logged in randomintinclusive');
 // stores information in an object form//
-locations.firstAndPike = {
+var firstAndPike = {
    minCustPerHr: 23,
     maxCustPerHr: 65,
     avgCookieSale: 6.3,
     estCookieSalesPerHrArray: [],
 };
-firstAndPike.name = 'Frist and Pike'; // diffrenet way to add a key and vaule to an object, using the .name as and example//
+firstAndPike.name = 'First and Pike'; // diffrenet way to add a key and vaule to an object, using the .name as and example//
 
 // for loop statement, to calculate the sales per hour //
 firstAndPike.calculateSalesPerHour = function(){
@@ -245,42 +249,42 @@ alki.renderAsUl();
 
 
 //==========================================//
-
+var addingtotal = [firstAndPike.avgCookieSale + seaTacAirport.avgCookieSale + seattleCenter.avgCookieSale + capitolHill.avgCookieSale + alki.avgCookieSale];
 
 var total = {
-  minCustPerHr: ,
-   maxCustPerHr: 65,
-   avgCookieSale: 6.3,
+  addingtotal: [0],
+   maxCustPerHr: [0],
+   avgCookieSale: [0],
    estCookieSalesPerHrArray: [],
 };
-alki.name = 'total';
+total.name = 'total';
 
 
-alki.calculateSalesPerHour = function(){
+total.calculateSalesPerHour = function(){
    for(var i = 0; i < 15; i++){
      var randomCustomersPerHour = getRandomIntInclusive (this.minCustPerHr, this.maxCustPerHr);
      this.estCookieSalesPerHrArray.push(randomCustomersPerHour);
      console.log('testing');
    }
  };
- alki.calculateSalesPerHour();
+ total.calculateSalesPerHour();
 
-alki.renderAsUl = function(){
-var alki_ul = document.getElementById('alki');
+total.renderAsUl = function(){
+var total_ul = document.getElementById('total');
 var title_li = document.createElement('th');
-title_li.textContent = 'Alki';
-alki_ul.appendChild(title_li);
+title_li.textContent = 'total';
+total_ul.appendChild(title_li);
 
 for (var i = 0; i < 15; i++){
  var new_li = document.createElement('th');
- var cookiesThisHr = this.estCookieSalesPerHrArray[i];
- new_li.textContent = `${cookiesThisHr}`;
- alki_ul.appendChild(new_li);
- console.log(cookiesThisHr);
+ total.length = this.estCookieSalesPerHrArray[i];
+ new_li.textContent = `${addingtotal}`;
+ total_ul.appendChild(new_li);
+ console.log(addingtotal);
  };
- console.log(alki);
+ console.log(total);
 };
-alki.renderAsUl();
+total.renderAsUl();
 
 
 
