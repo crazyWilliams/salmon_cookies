@@ -1,10 +1,14 @@
-
-
-/* table {
+ table {
   border: rgb(240, 206, 206) 30px;
   border-collapse: collapse;
   margin-bottom: 40px;
-} */
+} 
+cursor {
+  background:rgb(240, 17, 17);
+  width:200px;
+  height:200px;
+
+}
 
 td, th {
   border:  black solid 1px;
@@ -15,7 +19,7 @@ h1 {
   margin: center;
 }
 
-img {
+img{
   display: block;
   height: 300px;
   width: 800px;
@@ -27,16 +31,19 @@ img {
 }
 
 body{
-  background-color: rgb(255, 172, 147);
+  background-color: rgb(214, 223, 91);
   font-family: monospace;
-  
+background-image: url("https://raw.githubusercontent.com/codefellows/seattle-201d46/master/class-06/lab/assets/salmon.png");
+
+background-repeat: repeat-x;
+background-size: 15%;
+
 }
 
-
 p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: brown;
-  text-align: center;
+  margin: auto;
+  color: black;
+  text-align: left;
   float: left;
 }
 
@@ -48,23 +55,20 @@ h1 {
   color: rgb(253, 107, 49);
   text-align: center;
 }
-h2, h3 {
-  font-family: 'Questrial', sans-serif;
-  font-display: auto;
-  color: rgb(253, 107, 49);
-  text-align: center;
-}
+
 a {
   color: rgb(253, 107, 49);
 }
 
 table {
+  
   border: 1px solid black;
   border-collapse: collapse;
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
+  
 }
 form {
   margin: auto;
   
-}
+} 

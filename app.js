@@ -3,12 +3,17 @@
 var times = [6 + ':00am ',7 + ':00am ',8 + ':00am ',9 + ':00am ',10 + ':00am ',11 + ':00am ',12 + ':00pm ',1 + ':00pm ',2 + ':00pm ',3 + ':00pm ',4 + ':00pm ',5 + ':00pm ',6 + ':00pm ',7 + ':00am ',8 + ':00pm '];
 
 
+
+// var loctions= [firstAndPike, seaTacAirport, seattleCenter, capitolHill, alki];
+
 // math method to round our number//
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+
+  
 
 // parent element
 // new element
@@ -25,8 +30,8 @@ function getRandomIntInclusive(min, max) {
 // append the tr to the table (table.appendChild(tr))
 
 
-var table_element =  document.getElementById('nums-table');
-var tr_element1 = document.createElement('tr');
+// var table_element =  document.getElementById('nums-table');
+// var tr_element1 = document.createElement('tr');
 
 
 console.log('logged in randomintinclusive');
@@ -37,7 +42,7 @@ var firstAndPike = {
     avgCookieSale: 6.3,
     estCookieSalesPerHrArray: [],
 };
-firstAndPike.name = 'Frist and Pike'; // diffrenet way to add a key and vaule to an object, using the .name as and example//
+firstAndPike.name = 'First and Pike'; // diffrenet way to add a key and vaule to an object, using the .name as and example//
 
 // for loop statement, to calculate the sales per hour //
 firstAndPike.calculateSalesPerHour = function(){
@@ -75,9 +80,9 @@ for (var i = 0; i < 15; i++){
   console.log(cookiesThisHr);
   };
   console.log(firstAndPike);
-};
-firstAndPike.renderAsUl();
 
+firstAndPike.renderAsUl();
+};
 
 //===========================================================================//
 
@@ -115,14 +120,12 @@ for (var i = 0; i < 15; i++){
  console.log(cookiesThisHr);
  };
  console.log(seaTacAirport);
-};
+
 seaTacAirport.renderAsUl();
-
-
+};
 
 
 //===============================================================================//
-
 
 
 var seattleCenter = {
@@ -159,9 +162,9 @@ for (var i = 0; i < 15; i++){
  console.log(cookiesThisHr);
  };
  console.log(seattleCenter);
-};
-seattleCenter.renderAsUl();
 
+seattleCenter.renderAsUl();
+};
 
 
 //===============================================================================//
@@ -200,9 +203,9 @@ for (var i = 0; i < 15; i++){
  console.log(cookiesThisHr);
  };
  console.log(capitolHill);
-};
-capitolHill.renderAsUl();
 
+capitolHill.renderAsUl();
+};
 
 // =============================================================//
 
@@ -239,66 +242,79 @@ for (var i = 0; i < 15; i++){
  console.log(cookiesThisHr);
  };
  console.log(alki);
-};
+
 alki.renderAsUl();
+};
 
-//=================================================//
 
-// var tableEl = document.getElementById('salesTable');
 
-// function buildHeader() {
-//   var header_tr = document.createElement('salesTable');
-//   var blankSpace = document.createElement('td');
-//   // blankSpace.textContent = ''; //optional
-//   header_tr.appendChild(blankSpace);
+//==========================================//
+// var addingtotal = [firstAndPike.avgCookieSale + seaTacAirport.avgCookieSale + seattleCenter.avgCookieSale + capitolHill.avgCookieSale + alki.avgCookieSale];
 
-//   for(var i = 0; i < 15; i++){
-//     var nextHeader_td = document.createElement('td');
-//     nextHeader_td.textContent = hoursOfOperation[l];
-//     header_tr.appendChild(nextHeader_td);
-//   }
-//   var total_td = document.createElement('td');
-//   total_td.textContent = 'salesTable';
-//   header_tr.appendChild(total_td);
-//   tableEl.appendChild(header_tr);
+// var total = {
+//   addingtotal: [0],
+//    maxCustPerHr: [0],
+//    avgCookieSale: [0],
+//    estCookieSalesPerHrArray: [],
 // };
+// total.name = 'total';
 
 
-//=====================================================//
+// total.calculateSalesPerHour = function(){
+//    for(var i = 0; i < 15; i++){
+//      var randomCustomersPerHour = getRandomIntInclusive (this.minCustPerHr, this.maxCustPerHr);
+//      this.estCookieSalesPerHrArray.push(randomCustomersPerHour);
+//      console.log('testing');
+//    }
+//  };
+//  total.calculateSalesPerHour();
 
+// total.renderAsUl = function(){
+// var total_ul = document.getElementById('total');
+// var title_li = document.createElement('th');
+// title_li.textContent = 'total';
+// total_ul.appendChild(title_li);
 
-    
-// 'use strict';
-
-// var testForm = document.getElementById('test-form');
-
-// var cookieStores = [];
-// var storeTable = document.getElementById('stores');
-
-
-// // testForm.addEventListener('submit', function(event){
-// //   console.log(event);
-// // });
-
-// var formSubmitHandler = function (formSubmit) {
-//   //when the form submits, it refreshes the page, lets prevent that
-//   formSubmit.preventDefault();
-
-//   // if I want the text in the username box
-//   // i look into the <event (parameter of callback function)>
-//   // into the <event>.target
-//   // into the <event>.target.<name (from html)>
-//   // into the <event>.target.<name>.value
-//   var username = formSubmit.target.username.value;
-//   var pet = formSubmit.target.pet.value;
-
-//   console.log(username);
-//   console.log(pet);
+// for (var i = 0; i < 15; i++){
+//  var new_li = document.createElement('th');
+//  total.length = this.estCookieSalesPerHrArray[i];
+//  new_li.textContent = `${addingtotal}`;
+//  total_ul.appendChild(new_li);
+//  console.log(addingtotal);
+//  };
+//  console.log(total);
 // };
-
-// testForm.addEventListener('submit', formSubmitHandler);
-
+// total.renderAsUl();
 
 
-//=======================================================//
+
+
+
+
+
+// //================================================================================//
+
+// var cookieForm = document.getElementById('cookie-store');
+
+// function makeNewStore (event){
+  
+//   event.preventDefault();
+//   console.log('Making a new store');
+//   // details about store: name: min: max: avg
+
+//   // Collect a value <event>.target.<name>.value
+//   var name = '';
+//   var min = minCustPerHr;
+//   var max = maxCustPerHr;
+//   var avg = avgCookieSale;
+
+//   console.log(name, min, max, avg);
+
+//   var newStore = new CookieStore(name, min, max, avg);
+
+//   console.log(newStore);
+
+//   newStore.render();
+ 
+// }
 
