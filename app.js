@@ -80,9 +80,9 @@ for (var i = 0; i < 15; i++){
   console.log(cookiesThisHr);
   };
   console.log(firstAndPike);
-};
-firstAndPike.renderAsUl();
 
+firstAndPike.renderAsUl();
+};
 
 //===========================================================================//
 
@@ -120,9 +120,9 @@ for (var i = 0; i < 15; i++){
  console.log(cookiesThisHr);
  };
  console.log(seaTacAirport);
-};
-seaTacAirport.renderAsUl();
 
+seaTacAirport.renderAsUl();
+};
 
 
 //===============================================================================//
@@ -162,9 +162,9 @@ for (var i = 0; i < 15; i++){
  console.log(cookiesThisHr);
  };
  console.log(seattleCenter);
-};
-seattleCenter.renderAsUl();
 
+seattleCenter.renderAsUl();
+};
 
 
 //===============================================================================//
@@ -203,9 +203,9 @@ for (var i = 0; i < 15; i++){
  console.log(cookiesThisHr);
  };
  console.log(capitolHill);
-};
-capitolHill.renderAsUl();
 
+capitolHill.renderAsUl();
+};
 
 // =============================================================//
 
@@ -242,9 +242,9 @@ for (var i = 0; i < 15; i++){
  console.log(cookiesThisHr);
  };
  console.log(alki);
-};
-alki.renderAsUl();
 
+alki.renderAsUl();
+};
 
 
 
